@@ -214,15 +214,18 @@ You are free / encouraged to submit by submitting your github repo in grade scop
 While we provide tests, reminder, you should test your own code before submitting!
 
 1. Learning (AG)
-
+   * Passes basic encrypt and decrypt 
 2. Approaching  (AG)
- 
-4. Meets  (MG)
-   * 
+   * Passes harder cases on encrypt and decrypt
+3. Meets  (MG)
+   * Breaks program into functions for decrypt and encrypt
+   * Contains full docstring with examples for functions that are self-contained (pure)
    * Coding practice file provided
    * Report questions 1-4 answered correctly
-5. Exceeds  (MG)
+4. Exceeds  (MG)
    * Remaining report questions answered correctly
+   * Recognizes repeated code building a more generalized approach to the problem
+   * Isolates printing from cipher functions / keeps a division of concerns
    * Deeper thinking answered with some thought into the answer
    
 
@@ -234,82 +237,33 @@ MG - Manually graded
 ### Submission Reminder 🚨
 For manually graded elements, we only guarantee time to submit for a regrade IF you submit by the DUE DATE. Submitting late may mean it isn't possible for the MG to be graded before the AVAILABLE BY DATE, removing any windows for your to resubmit in time. While it will be graded, it is always best to submit by the due date, so you have full opportunity to improve your grade.
 
-## 📚 Resources
-* [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods) - a number of useful methods to strings
-* [Capwords](https://docs.python.org/3/library/string.html#string.capwords) - one option to generate title case
-* [String Format Examples](https://docs.python.org/3/library/string.html#format-examples)
-* [String Find Example](https://www.w3schools.com/python/ref_string_find.asp)
-* [List Append Method](https://www.w3schools.com/python/ref_list_append.asp)
-* [in/not in operator python](https://realpython.com/python-in-operator/)
-  
-
-### In Operator
-To check for membership of a sequence (list, tuple, string, etc) you can use the `in` operator. For example
-
-```python
-if 'a' in 'abc':
-   print("a is in abc") # this will print
-
-if 5 in [1,2,3,4]:
-   print("5 is in the list") # this will not print
-
-if 'bride' in 'Princess Bride'.casefold():
-   print("bride is in the title") # this will print, but only because of the casefold!
-```
-
-You can explore with the `in` operator in the python shell to see how it works.
 
 
-### Multiple Return Types, Tuple?
 
-In python, it is very common to have multiple values returned from a function. 
-By default, a tuple is used to return the multiple values. As such, if we write the following function
+## Resources - For on Strings
+
+As a reminder, you can run for on strings using the following
 
 
 ```python
-
-def my_func():
-   return 10, 5
-
-values = my_func()
-print(values)
+string = "Aloha"
+for character in string:
+   print(character)
 ```
-See [Visualization](https://pythontutor.com/render.html#code=def%20my_func%28%29%3A%0A%20%20%20return%2010,%205%0A%0Avalues%20%3D%20my_func%28%29%0Aprint%28values%29%0A%0A%23%23%20also%0Aprint%28values%5B0%5D%2B10%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-the values `(10, 5)` would be printed as the tuple. You can also access items in that tuple.
-
-```python
-print(values[0]+10)
-```
-Would cause `20` to be printed. 
-
-#### Adding Unpacking
-
-It is also common to 'unpack' values, especially from function returns.
-
-```python
-one, two = my_func()
-
-print(one)  
-print(two)
-```
 would print
+
 ```
-10
-5
-```
-to the screen. See [Visualization](https://pythontutor.com/render.html#code=def%20my_func%28%29%3A%0A%20%20%20return%2010,%205%0A%0Aone,%20two%20%3D%20my_func%28%29%0A%0Aprint%28one%29%20%20%0Aprint%28two%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-The code is essentially saying
-
-```python
-values = my_func()
-
-one = values[0]
-two = values[1]
+A
+l
+o
+h
+a
 ```
 
-Needless to say, the automatic unpacking of values is easier to read in this case as long as you know the
-exact number of return values.  Packing by default has a lot of uses. This [article on unpacking](https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment/) has a lot of information (more than you need right now), but something to save to read for later. :relaxed:
+You can also apply various string methods on the individual characters. To learn more
+about string methods, here are some resources
 
-
+* [W3Schools String Methods](https://www.w3schools.com/python/python_ref_string.asp)
+* [Python.org Common String Operations](https://docs.python.org/3/library/string.html)
+  * [Python.org String methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
