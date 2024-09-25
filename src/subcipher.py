@@ -13,12 +13,26 @@ ALL_LETTERS_DIGITS = digits + ascii_letters
 # use this random key if none is provided, try printing it out to see what it is
 RANDOM_KEY = "".join(sample(list(ALL_LETTERS_DIGITS), len(ALL_LETTERS_DIGITS)))
 
+ACTION_ENCRYPT = 'encrypt'
+ACTION_DECRYPT = 'decrypt'
 
 # add your functions here. you should think about how you break up your program. 
 
 
-def main(action, msg, key):
-    """ Starting point of your program. You must start here."""
+def main(action: str, msg: str, key: str) -> None:
+    f"""Main driver of the program based on
+    the passed in arguments. Will encrypt or decrypt
+    based on the action, message, and key provided.
+
+
+
+    Args:
+        action (str): Options are {ACTION_ENCRYPT} and {ACTION_DECRYPT}
+        msg (str): the message to encrypt or decrypt
+        key (str): the key to use for encryption or decryption, if the empty
+        string is passed in, a random key will be generated using
+        RANDOM_KEY.
+    """
     ... # same as pass, remove this line when you add your code
 
 
@@ -33,12 +47,12 @@ def main(action, msg, key):
 # reminder, windows replaces python3 with python
 if __name__ == "__main__":
     # check to see if there are command line arguments
-    _action = 'encrypt'
+    _action = ACTION_ENCRYPT
     _msg = ''
     _key = ''
     if len(sys.argv) > 1:
         if sys.argv[1] == '-d' or sys.argv[1] == '--decrypt':
-            _action = 'decrypt'
+            _action = ACTION_DECRYPT
             remainder = sys.argv[2:]
         else:
             remainder = sys.argv[1:]
