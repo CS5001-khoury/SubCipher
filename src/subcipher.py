@@ -16,7 +16,7 @@ RANDOM_KEY = "".join(sample(list(ALL_LETTERS_DIGITS), len(ALL_LETTERS_DIGITS)))
 ACTION_ENCRYPT = 'encrypt'
 ACTION_DECRYPT = 'decrypt'
 
-# add your functions here. you should think about how you break up your program. 
+# add your functions here. you should think about how you break up your program.
 
 
 def main(action: str, msg: str, key: str) -> None:
@@ -33,11 +33,9 @@ def main(action: str, msg: str, key: str) -> None:
         string is passed in, a random key will be generated using
         RANDOM_KEY.
     """
-    ... # same as pass, remove this line when you add your code
+    ...  # same as pass, remove this line when you add your code
 
 
-# The following allows us to run various features from the command line
-# do not modify.
 # If you wish to run the program from the command line
 # You could do the following
 # python3 subcipher.py "Aloha, World"
@@ -45,8 +43,11 @@ def main(action: str, msg: str, key: str) -> None:
 # you can decrypt by adding -d or --decrypt as the first argument, and then a key after the message
 # python3 subcipher.py -d "9HUqv, VUEHQ" "0XkDwIrGzYv17QfNiqgbZHJ5UhKEljCTRnxA9uaySWopM6emc2dP4sL83BVtFO"
 # reminder, windows replaces python3 with python
+
+# The following allows us to run various features from the command line
+# do not modify!
 if __name__ == "__main__":
-    # check to see if there are command line arguments
+    # sets default values for args
     _action = ACTION_ENCRYPT
     _msg = ''
     _key = ''
@@ -60,4 +61,6 @@ if __name__ == "__main__":
             _msg = remainder[0]
             if len(remainder) > 1:
                 _key = remainder[1]
+
+    # calls your main function
     main(_action, _msg, _key)
