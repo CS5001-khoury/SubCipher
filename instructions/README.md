@@ -207,6 +207,29 @@ others on your own to get more practice coding.  However, you need to submit at 
 completed practice as its own python file (which means even if the coding practice had an online
 form to fill out like codingbat, you need to copy your solution to a python file).
 
+## 🤖 Use of LLMs
+You should **not** use LLMs for writing your code. This is about learning the process, and without learning the process you may find it actually more difficult to generate code with LLMs. This is because the prompts for LLMs need to be exact, or they will make faulty assumptions about the code you are trying to generate (often generating incorrect test cases!). 
+
+You are free to use LLMs to help you think of edge cases  **after** you have a working function. An example prompt could be:
+
+> Please evaluate the following function focusing on these specific areas:
+>
+> 1. **Code correctness**: Does the implementation match the docstring description?
+> 2. **Docstring completeness**: Are the parameters, return value, and examples clear and accurate?
+> 3. **Edge cases**: What boundary conditions or unusual inputs could cause issues?
+>
+> For any edge cases you identify:
+> - Explain why they're problematic
+> - Show what would happen with specific input examples
+> - Suggest how to handle them (documentation or code changes)
+>
+> Focus your feedback on the most important issues first. Assume this is for a beginner programming course at week 5 of our learning. We have not covered error checking yet, 
+> nor should I include specialized statements for invalid input.
+>
+> [then paste in the single function you are looking at]
+
+Note, you could also have it evaluate your final program as a whole - but it would be better to do each individual function, then ask feedback on the full program. 
+
 ## 📝 Grading Rubric
 
 You need to submit the following files:
